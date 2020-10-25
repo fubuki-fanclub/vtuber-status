@@ -113,7 +113,7 @@ function streamStartToString(startUnixTime: number): string {
     if (timeTillStart > 3600 * 24) return '...';
     if (timeTillStart < 0) return 'LIVE?';
     if (timeTillStart < 60) return 'STARTING';
-    if (timeTillStart < 3600) return `${Math.round(timeTillStart / 60)}`;
+    if (timeTillStart < 3600) return `${Math.round(timeTillStart / 60)}m`;
     const hours = Math.floor(timeTillStart / 3600), minutes = Math.floor((timeTillStart % 3600) / 60);
     return `${hours}h ${minutes != 0 ? minutes + 'm' : ''}`;
 }
