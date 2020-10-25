@@ -1,0 +1,28 @@
+{
+  "name": "vtuber-status",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"What are tests lol\" && exit 1"
+  },
+  "keywords": [],
+  "contributors": [
+    {
+      "name": "Martin Hanzlowsky",
+      "email": "martin.hanzlowskyg@gmail.com",
+      "url": "https://weebify.me"
+    },
+    {
+      "name": "Matic Babnik",
+      "email": "matic.babnik@outlook.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "puppeteer": "^5.4.0"
+  }
+}
