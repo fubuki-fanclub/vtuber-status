@@ -8,7 +8,7 @@ const enum streamStatus {
 interface youtubeStream {
     title: string,
     url: string,
-    thubnailUrl: string,
+    thumbnailUrl: string,
     unixTime: number
 }
 
@@ -32,8 +32,38 @@ interface response {
 }
 
 
-function generateDOM(data: response) {
+async function main() {
+    registerServiceWorker().then(registration => {
+        if (registration.installing) {
+            registration.installing.postMessage("Test");
+        }
+    }, err => {
+        console.error("Installing the worker failed!", err);
+    });
+    const permission = await requestNotificationPermission()
+}
 
+function checkBrowserSupport(): Boolean {
+    return "serviceWorker" in navigator && "PushManager" in window;
+}
+
+async function registerServiceWorker(): Promise<ServiceWorkerRegistration> {
+    checkBrowserSupport()
+    const swRegistration = await navigator.serviceWorker.register('service.js')
+    return swRegistration
+}
+
+async function requestNotificationPermission(): Promise<void> {
+    const permission = await window.Notification.requestPermission()
+
+    if (permission !== 'granted') {
+        throw new Error('Permission not granted for Notification')
+    }
+}
+
+
+function generateDOM(data: response) {
+    if (!window.localStorage.getItem('notifications')) window.localStorage.setItem('notifications', '')
     if (data.error) {
         return generateErrorDOM('Error', data.error);
     } else if (data.groups) {
@@ -137,11 +167,24 @@ function generateErrorDOM(title: string, description: string): HTMLElement {
     return dom;
 }
 
+window.addEventListener('storage', function (e) {
+    if (e.key === 'notifications') {
+        const popupChannelInfo = document.querySelector('.channel-info');
+        const channel = popupChannelInfo?.id;
+        if (channel && e.newValue?.includes(channel)) {
+            popupChannelInfo?.classList.add('on');
+        } else popupChannelInfo?.classList.remove('on');
+    }
+})
+
 function setPopupDOM(popup: HTMLElement, channel: youtubeChannel) {
     Array.from(popup.children).forEach(x => popup.removeChild(x)); //kill all children xd
 
     const channelInfo = document.createElement('div');
+    channelInfo.id = channel.name;
     channelInfo.classList.add('channel-info');
+    if (window.localStorage.getItem('notifications')?.includes(channel.name))
+        channelInfo.classList.add('on')
     popup.appendChild(channelInfo);
 
     const avatar = document.createElement('img');
@@ -149,6 +192,18 @@ function setPopupDOM(popup: HTMLElement, channel: youtubeChannel) {
     avatar.height= 64;
     avatar.src = channel.avatar;
     avatar.classList.add('channel-info-img');
+    avatar.addEventListener('click', (ev: MouseEvent) => {
+        ev.stopPropagation()
+        const popupChannelInfo = document.querySelector('.channel-info') as Element
+        popupChannelInfo.classList.toggle('on')
+        let notifications = window.localStorage.getItem('notifications') as string
+        if (notifications?.includes(popupChannelInfo.id)) {
+            notifications.replace(popupChannelInfo.id, '')
+        } else {
+            notifications += ` ${popupChannelInfo.id}`
+        }
+        window.localStorage.setItem('notifications', notifications)
+    })
     channelInfo.appendChild(avatar);
 
     const moreInfo = document.createElement('div');
@@ -214,8 +269,12 @@ function hide(me: HTMLElement) {
     Array.from(me.children[0].children).forEach(x => me.children[0].removeChild(x));
 }
 
+const refreshBtn = document.querySelector('.btn-circle') as HTMLDivElement
+refreshBtn.addEventListener('click', () => console.error("#TODO"))
 
-let data: response;
+let data: response = { 
+    groups: []
+}
 
 function channelToCompNum(channel: youtubeChannel): number {
     if (channel.status == streamStatus.LIVE) return 0;
@@ -224,21 +283,21 @@ function channelToCompNum(channel: youtubeChannel): number {
     return -1;
 }
 
-fetch('http://31.15.215.249/api/?maxHoursUpcoming=24', { method: 'GET' }).then(async (res) => {
-    const newData: response = { groups: await res.json() };
-    data = { groups: [] };
-    if (newData.groups) {
-        for (const g of newData.groups) {
-            data.groups?.push({
-                name: g.name, channels: g.channels.sort((a, b) => channelToCompNum(a)-channelToCompNum(b))
-            })
-        }
-    }
-    document.getElementById('app')?.appendChild(generateDOM(data));
-}).catch((err) => {
-    console.log(err);
-    data = { error: err };
-    document.getElementById('app')?.appendChild(generateDOM(data));
-})
-
-//document.getElementById('app')?.appendChild(generateDOM(data));
+fetch(`/api/?maxHoursUpcoming=24`, { method: 'GET' })
+    .then(res => res.json())
+    .then(res => ({ groups: res }))
+    .then((newData: response) => {
+        if (newData.groups?.length) newData.groups.forEach((group: group) => data.groups?.push({
+            name: group.name,
+            channels: group.channels.sort((a: youtubeChannel, b) => channelToCompNum(a) - channelToCompNum(b))
+        }))
+        window.localStorage.setItem('vtuberData', JSON.stringify(data))
+    })
+    .catch(error => {
+        console.error(error)
+        const storageData = window.localStorage.getItem('vtuberData')
+        data = storageData? JSON.parse(storageData) : { error }
+    })
+    .finally(() => {
+        document.getElementById('app')?.appendChild(generateDOM(data))
+    })

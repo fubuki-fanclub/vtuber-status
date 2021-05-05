@@ -121,6 +121,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.808);
   color: white;
   padding: 4px;
+  margin: 4px;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -199,7 +200,11 @@ a {
 .channel-info {
   display: flex;
   flex-direction: row;
+  transition: backround-color, 130ms linear;
 }
+.channel-info.on { 
+  background-color: red;
+} 
 .channel-info-img {
   size: 64px 64px;
   border-radius: 50%;

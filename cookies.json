@@ -1,0 +1,14 @@
+[
+  {
+    "name": "CONSENT",
+    "value": "YES+cb.20210502-18-p1.en+FX+431",
+    "domain": ".youtube.com",
+    "path": "/",
+    "expires": 2146723199.606515,
+    "size": 38,
+    "httpOnly": false,
+    "secure": true,
+    "session": false,
+    "sameSite": "None"
+  }
+]

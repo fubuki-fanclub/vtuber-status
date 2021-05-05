@@ -24,7 +24,7 @@
     return {
         status,
         stream,
-        subscribers: document.getElementById('subscriber-count').innerText,
+        subscribers: document.getElementById('subscriber-count')?.innerText || 'UNKNOWN',
         avatar: document.querySelector('#avatar > #img').src,
     }
 })();
