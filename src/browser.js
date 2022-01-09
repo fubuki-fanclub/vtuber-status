@@ -4,10 +4,10 @@
         const parent = nParent(el, 5);
         return {
             stream: {
-                title: parent.querySelector('yt-formatted-string.style-scope.ytd-video-renderer')?.textContent ?? parent.querySelector('#video-title').textContent,
+                title: parent.querySelector('yt-formatted-string.style-scope.ytd-video-renderer')?.textContent ?? parent.querySelector('#video-title')?.textContent,
                 thumbnailUrl: parent.querySelector('img').src,
                 url: parent.querySelector('#thumbnail').href,
-                unixTime: status == 'UPCOMING' ? new Date(parent.querySelector('#metadata-line>span:nth-child(2)').textContent.replace('Scheduled for ', '')).getTime() : undefined
+                unixTime: status == 'UPCOMING' ? new Date(parent.querySelector('#metadata-line>span:nth-child(2)')?.textContent.replace('Scheduled for ', '')).getTime() : undefined
             },
             status,
         }

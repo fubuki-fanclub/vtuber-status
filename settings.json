@@ -1,7 +1,295 @@
 {
   "refreshInterval": 300000,
-  "groups": [{"group":"3D talents","channels":[{"name":"Tokino Sora 🐻","id":"UCp6993wxpyDPHUpavwDFqgg"},{"name":"Roboco 🤖","id":"UCDqI2jOz0weumE8s7paEk6g"},{"name":"Sakura Miko 🌸","id":"UC-hM6YJuNYVAmUWxeIr9FeA"}]},{"group":"2D talent","channels":[{"name":"Hoshimachi Suisei ☄️","id":"UC5CwaMl1eIgY8h02uZw7u8A"}]},{"group":"1st gen","channels":[{"name":"Yozora Mel 🌟","id":"UCD8HOxPs4Xvsm8H0ZxXGiBw"},{"name":"Aki Rosenthal 🍎","id":"UCFTLzh12_nrtzqBPsTCqenA"},{"name":"Natsuiro Matsuri 🏮","id":"UCQ0UDLQCjY0rmuxCDE38FGg"},{"name":"Shirakami Fubuki 🌽","id":"UCdn5BQ06XqgXoAxIhbqw5Rg"},{"name":"Akai Haato ❣️","id":"UC1CfXB_kRs3C-zaeTG3oGyg"}]},{"group":"2nd gen","channels":[{"name":"Minato Aqua ⚓️","id":"UC1opHUrw8rvnsadT-iGp7Cg"},{"name":"Murasaki Shion 🌙","id":"UCXTpFs_3PqI41qX2d9tL2Rw"},{"name":"Nakiri Ayame 👿","id":"UC7fk0CB07ly8oSl0aqKkqFg"},{"name":"Yuzuki Choco 🍫💋","id":"UC1suqwovbL1kzsoaZgFZLKg"},{"name":"Oozora Subaru 🚑","id":"UCvzGlP9oQwU--Y0r9id_jnA"}]},{"group":"Gamers","channels":[{"name":"Shirakami Fubuki 🌽","id":"UCdn5BQ06XqgXoAxIhbqw5Rg"},{"name":"Ookami Mio 🌲","id":"UCp-5t9SrOQwXMU7iIjQfARg"},{"name":"Nekomata Okayu 🍙","id":"UCvaTdHTWBGv3MKj3KVqJVCw"},{"name":"Inugami Korone 🥐","id":"UChAnqc_AY5_I3Px5dig3X1Q"}]},{"group":"INoNaKa MUSIC","channels":[{"name":"AZKi ⚒","id":"UC0TXe_LYZ4scaW2XMyi5_kw"}]},{"group":"3th gen","channels":[{"name":"Usada Pekora 👯","id":"UC1DCedRgGHBdm81E1llLhOQ"},{"name":"Uruha Rushia 🦋","id":"UCl_gCybOJRIgOXw6Qb4qJzQ"},{"name":"Shiranui Flare 🔥","id":"UCvInZx9h3jC2JzsIzoOebWg"},{"name":"Shirogane Noel ⚔️","id":"UCdyqAaZDKHXg4Ahi7VENThQ"},{"name":"Houshou Marine 🏴‍☠️","id":"UCCzUftO8KOVkV4wQG1vkUvg"}]},{"group":"4th gen","channels":[{"name":"Tsunomaki Watame 🐏","id":"UCqm3BQLlJfvkTsX_hvm0UmA"},{"name":"Tokoyami Towa 👾","id":"UC1uv2Oq6kNxgATlCiez59hw"},{"name":"Kiryu Coco 🐉","id":"UCS9uQI-jC3DE0L4IpXyvr6w"},{"name":"Amane Kanata 💫","id":"UCZlDXzGoo7d44bwdNObFacg"},{"name":"Himemori Luna 🍬","id":"UCa9Y57gfeY0Zro_noHRVrnw"}]},{"group":"5th gen","channels":[{"name":"Yukihana Lamy ☃️","id":"UCFKOVgVbGmX65RxO3EtH3iw"},{"name":"Momosuzu Nene 🥟","id":"UCAWSyEs_Io8MtpY3m-zqILA"},{"name":"Shishiro Botan ♌","id":"UCUKD-uaobj9jiqB-VXt71mA"},{"name":"Omaru Polka 🎪","id":"UCK9V2B22uJYu3N7eR_BT9QA"}]},{"group":"English","channels":[{"name":"Ninomae Ina'nis 🐙","id":"UCMwGHR0BTZuLsmjY_NT5Pwg"},{"name":"Takanashi Kiara 🐔","id":"UCHsx4Hqa-1ORjQTh9TYDhww"},{"name":"Watson Amelia 🔎","id":"UCyl1z3jo3XHR1riLFKG5UAg"},{"name":"Mori Calliope 💀","id":"UCL_qhgtOy0dy1Agp8vkySQg"},{"name":"Gawr Gura 🔱","id":"UCoSrY_IQQVpmIRZ9Xf-y93g"}]}],
-  "numberOfChannels": 38
+  "groups": [
+    {
+      "group": "Gen 0",
+      "channels": [
+        {
+          "name": "Tokino Sora 🐻",
+          "id": "UCp6993wxpyDPHUpavwDFqgg"
+        },
+        {
+          "name": "Roboco 🤖",
+          "id": "UCDqI2jOz0weumE8s7paEk6g"
+        },
+        {
+          "name": "Sakura Miko 🌸",
+          "id": "UC-hM6YJuNYVAmUWxeIr9FeA"
+        },
+        {
+          "name": "Hoshimachi Suisei ☄️",
+          "id": "UC5CwaMl1eIgY8h02uZw7u8A"
+        },
+        {
+          "name": "AZKi ⚒",
+          "id": "UC0TXe_LYZ4scaW2XMyi5_kw"
+        }
+      ]
+    },
+    {
+      "group": "1st gen",
+      "channels": [
+        {
+          "name": "Yozora Mel 🌟",
+          "id": "UCD8HOxPs4Xvsm8H0ZxXGiBw"
+        },
+        {
+          "name": "Aki Rosenthal 🍎",
+          "id": "UCFTLzh12_nrtzqBPsTCqenA"
+        },
+        {
+          "name": "Natsuiro Matsuri 🏮",
+          "id": "UCQ0UDLQCjY0rmuxCDE38FGg"
+        },
+        {
+          "name": "Shirakami Fubuki 🌽",
+          "id": "UCdn5BQ06XqgXoAxIhbqw5Rg"
+        },
+        {
+          "name": "Akai Haato ❣️",
+          "id": "UC1CfXB_kRs3C-zaeTG3oGyg"
+        }
+      ]
+    },
+    {
+      "group": "2nd gen",
+      "channels": [
+        {
+          "name": "Minato Aqua ⚓️",
+          "id": "UC1opHUrw8rvnsadT-iGp7Cg"
+        },
+        {
+          "name": "Murasaki Shion 🌙",
+          "id": "UCXTpFs_3PqI41qX2d9tL2Rw"
+        },
+        {
+          "name": "Nakiri Ayame 👿",
+          "id": "UC7fk0CB07ly8oSl0aqKkqFg"
+        },
+        {
+          "name": "Yuzuki Choco 🍫💋",
+          "id": "UC1suqwovbL1kzsoaZgFZLKg"
+        },
+        {
+          "name": "Oozora Subaru 🚑",
+          "id": "UCvzGlP9oQwU--Y0r9id_jnA"
+        }
+      ]
+    },
+    {
+      "group": "Gamers",
+      "channels": [
+        {
+          "name": "Shirakami Fubuki 🌽",
+          "id": "UCdn5BQ06XqgXoAxIhbqw5Rg"
+        },
+        {
+          "name": "Ookami Mio 🌲",
+          "id": "UCp-5t9SrOQwXMU7iIjQfARg"
+        },
+        {
+          "name": "Nekomata Okayu 🍙",
+          "id": "UCvaTdHTWBGv3MKj3KVqJVCw"
+        },
+        {
+          "name": "Inugami Korone 🥐",
+          "id": "UChAnqc_AY5_I3Px5dig3X1Q"
+        }
+      ]
+    },
+    {
+      "group": "3th gen",
+      "channels": [
+        {
+          "name": "Usada Pekora 👯",
+          "id": "UC1DCedRgGHBdm81E1llLhOQ"
+        },
+        {
+          "name": "Uruha Rushia 🦋",
+          "id": "UCl_gCybOJRIgOXw6Qb4qJzQ"
+        },
+        {
+          "name": "Shiranui Flare 🔥",
+          "id": "UCvInZx9h3jC2JzsIzoOebWg"
+        },
+        {
+          "name": "Shirogane Noel ⚔️",
+          "id": "UCdyqAaZDKHXg4Ahi7VENThQ"
+        },
+        {
+          "name": "Houshou Marine 🏴‍☠️",
+          "id": "UCCzUftO8KOVkV4wQG1vkUvg"
+        }
+      ]
+    },
+    {
+      "group": "4th gen",
+      "channels": [
+        {
+          "name": "Tsunomaki Watame 🐏",
+          "id": "UCqm3BQLlJfvkTsX_hvm0UmA"
+        },
+        {
+          "name": "Tokoyami Towa 👾",
+          "id": "UC1uv2Oq6kNxgATlCiez59hw"
+        },
+        {
+          "name": "Amane Kanata 💫",
+          "id": "UCZlDXzGoo7d44bwdNObFacg"
+        },
+        {
+          "name": "Himemori Luna 🍬",
+          "id": "UCa9Y57gfeY0Zro_noHRVrnw"
+        }
+      ]
+    },
+    {
+      "group": "5th gen",
+      "channels": [
+        {
+          "name": "Yukihana Lamy ☃️",
+          "id": "UCFKOVgVbGmX65RxO3EtH3iw"
+        },
+        {
+          "name": "Momosuzu Nene 🥟",
+          "id": "UCAWSyEs_Io8MtpY3m-zqILA"
+        },
+        {
+          "name": "Shishiro Botan ♌",
+          "id": "UCUKD-uaobj9jiqB-VXt71mA"
+        },
+        {
+          "name": "Omaru Polka 🎪",
+          "id": "UCK9V2B22uJYu3N7eR_BT9QA"
+        }
+      ]
+    },
+    {
+      "group": "EN gen 1",
+      "channels": [
+        {
+          "name": "Ninomae Ina'nis 🐙",
+          "id": "UCMwGHR0BTZuLsmjY_NT5Pwg"
+        },
+        {
+          "name": "Takanashi Kiara 🐔",
+          "id": "UCHsx4Hqa-1ORjQTh9TYDhww"
+        },
+        {
+          "name": "Watson Amelia 🔎",
+          "id": "UCyl1z3jo3XHR1riLFKG5UAg"
+        },
+        {
+          "name": "Mori Calliope 💀",
+          "id": "UCL_qhgtOy0dy1Agp8vkySQg"
+        },
+        {
+          "name": "Gawr Gura 🔱",
+          "id": "UCoSrY_IQQVpmIRZ9Xf-y93g"
+        }
+      ]
+    },
+    {
+      "group": "IDOL company",
+      "channels": [
+        {
+          "name": "Yagoo",
+          "id": "UCu2DMOGLeR_DSStCyeQpi5Q"
+        }
+      ]
+    },
+    {
+      "group": "ID gen 1",
+      "channels": [
+        {
+          "name": "Ayunda Risu",
+          "id": "UCOyYb1c43VlX9rc_lT6NKQw"
+        },
+        {
+          "name": "Moona Hoshinova",
+          "id": "UCP0BspO_AMEe3aQqqpo89Dg"
+        },
+        {
+          "name": "Airani Iofifteen",
+          "id": "UCAoy6rzhSf4ydcYjJw3WoVg"
+        }
+      ]
+    },
+    {
+      "group": "ID gen 2",
+      "channels": [
+        {
+          "name": "Kureiji Ollie",
+          "id": "UCYz_5n-uDuChHtLo7My1HnQ"
+        },
+        {
+          "name": "Anya Melfissa",
+          "id": "UC727SQYUvx5pDDGQpTICNWg"
+        },
+        {
+          "name": "Pavolia Reine",
+          "id": "UChgTyjG-pdNvxxhdsXfHQ5Q"
+        }
+      ]
+    },
+    {
+      "group": "gen 6",
+      "channels": [
+        {
+          "name": "La+ Darknesss",
+          "id": "UCENwRMx5Yh42zWpzURebzTw"
+        },
+        {
+          "name": "Takane Lui",
+          "id": "UCs9_O1tRPMQTHQ-N_L6FU2g"
+        },
+        {
+          "name": "Hakui Koyori",
+          "id": "UC6eWCld0KwmyHFbAqK3V-Rw"
+        },
+        {
+          "name": "Sakamata Chloe",
+          "id": "UCIBY1ollUsauvVi4hW4cumw"
+        },
+        {
+          "name": "Kazama Iroha",
+          "id": "UC_vMYWcDjmfdpH6r4TTn1MQ"
+        }
+      ]
+    },
+    {
+      "group": "EN gen 2",
+      "channels": [
+        {
+          "name": "Tsukumo Sana",
+          "id": "UCsUj0dszADCGbF3gNrQEuSQ"
+        },
+        {
+          "name": "Ceres Fauna",
+          "id": "UCO_aKKYxn4tvrqPjcTzZ6EQ"
+        },
+        {
+          "name": "Ouro Kronii",
+          "id": "UCmbs8T6MWqUHP1tIQvSgKrg"
+        },
+        {
+          "name": "Nanashi Mumei",
+          "id": "UC3n5uGu18FoCy23ggWWp8tA"
+        },
+        {
+          "name": "Hakos Baelz",
+          "id": "UCgmPnx-EEeOrZSg5Tiw7ZRQ"
+        }
+      ]
+    },
+    {
+      "group": "Project:HOPE",
+      "channels": [
+        {
+          "name": "IRyS",
+          "id": "UC8rcEBzJSleTkf_-agPM20g"
+        }
+      ]
+    }
+  ]
 }
-
-
